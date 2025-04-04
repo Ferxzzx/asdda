@@ -14,16 +14,13 @@
     body {
       font-family: sans-serif;
       background-color: #fff8f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
 
     .container {
       background-color: palegoldenrod;
       text-align: center;
       padding: 2rem 1rem;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -32,6 +29,7 @@
 
     .btn {
       margin-top: 2rem;
+      flex-wrap: wrap;
     }
 
     .btn a {
@@ -76,10 +74,9 @@
       display: none;
       position: fixed;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90vw;
-      max-width: 600px;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       background-color: pink;
       padding: 2rem 1rem;
       overflow-y: auto;
@@ -88,8 +85,6 @@
       justify-content: center;
       animation: fadeIn 1s ease-in-out;
       z-index: 999;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     #message.show {
@@ -149,6 +144,18 @@
     }
 
     @media screen and (max-width: 600px) {
+      .container {
+        padding: 1.5rem 1rem; /* Menos padding para móviles */
+      }
+
+      h1 {
+        font-size: 1.6rem; /* Ajustar tamaño del título */
+      }
+
+      p {
+        font-size: 1rem; /* Ajustar tamaño del texto */
+      }
+
       .btn a {
         width: 100%;
         max-width: 200px;
@@ -199,16 +206,25 @@
   <div id="message">
     <h2>Feliz Aniversario mi princesa 💘💖</h2>
     <p>
-      Mi amor hoy cumplimos 1 mes más juntos, y no es un día cualquiera por qué hoy celebramos el día que oficializamos por primera vez nuestra relación como novios
-      y como compañeros de vida que se amarán y respetarán a pesar de los problemas o malos entendidos que aparecerán en nuestro camino.
-      Gracias por elegirme y seguir eligiéndome a pesar de los malos entendidos o de la distancia, estoy seguro y convencido de que pronto acabará eso y estaremos juntos🌹
-      Te amo con todo mi corazón y te pido disculpas por las veces que fui distante o discutíamos por todo, te juro que odié esa etapa de nuestra vida porque era alguien muy tonto que se dejaba guiar 
-      por sus celos o desconfianza, ahora sé que no vale la pena reaccionar impulsivamente como un tonto, porque me ciega totalmente y lastimo a mi amorcito que siempre trata de estar conmigo dándome su amor sincero...
-      Quiero lograr a tu lado nuestras promesas y sueños❤️, quiero tener a nuestro hijo Porky🐶 y entregártelo como promesa de nuestro amor verdadero❤️
-      y también quiero acariciarte y llenarte de besos, quiero morderte y lamerte todo, que me traes demasiado loquito mi amor ❤️ quiero hacer todo a tu lado.<br>
-      Mi princesita hermosa déjame decirte que odio escucharte decir que no te gusta algunas partes de tu físico, que por esa inseguridad no logras usar ropa a tu gusto o que no te sientas cómoda contigo misma pero...
-      déjame decirte que eres una tonta porque amor mío eres un mujerón, un tremendo bombón🍫 suculento y muy sexy que me tiene muy enamorado con ese cuerpazo tan bonito que te cargas mi princesa, me gusta como eres
-      y como te ves despeinada, chinita, triste, feliz y cariñosa... te pido que por favor mi amor ya no le des importancia a esas tonterías, ¿sí? Eres mi niña perfecta💘<br>
+      Mi amor hoy cumplimos 1 mes más juntos , y no es un día cualquiera por qué hoy celebramos el día que oficializamos por primera vez 
+      nuestra relación como novios
+      y como compañeros de vida que se amarán y respetaran a pesar de los problemas o malos entendidos que aparecerán en nuestro camino .
+      Gracias por elegirme y seguir eligiéndome a pesar de los malos entendidos o de la distancia ,estoy seguro y convencido de que 
+      pronto acabará eso y estaremos juntos🌹<br>
+      Te amo con todo mi corazón y te pido disculpas por las veces que fui distante o discutíamos por todo , te juro que odie esa etapa 
+      de nuestra vida por que era alguien muy tonto que se dejaba guiar 
+      por sus celos o desconfianza , ahora sé que no vale la pena reaccionar impulsivamente como un tonto , por que me ciega totalmente 
+      y lastimo a mi amorcito que siempre trata de estar conmigo dándome su amor sincero...
+      Quiero lograr a tú lado nuestras promesas y sueños❤️ , quiero tener a nuestro hijo Porky🐶 y entregártelo como promesa de nuestro 
+      amor verdadero❤️
+      y también quiero acariciarte y llenarte de besos , quiero morderte y lamerte todoo que me traes demasiado loquito mi amor ❤️ quiero 
+      hacer todo a tú lado .<br>
+      Mi princesaa hermosaaa dejame decirte que odio escucharte decir que no te gusta algunas partes de tu físico que por esa inseguridad 
+      no logras usar ropa a tu gusto o que no te sientas cómoda contigo misma pero...
+      déjame decirte que eres una tonta por qué amorr miooo eres un mujeron un tremendo bombón🍫suculento y muy sexy que me tiene muy 
+      enamorado con ese cuerpazo tan bonito que te cargas mi princesa, me gusta como eres
+      y como te ves despeinada , chinita , triste , feliz y cariñosa.. te pido que por favor mi amor ya no le des importancia a esas 
+      tonterías si ? eres mi niña perfecta💘<br>
     </p>
 
     <button id="back">Regresa aquí bb</button>

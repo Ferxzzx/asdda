@@ -72,19 +72,17 @@
 
     #message {
       display: none;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
       width: 100vw;
-      min-height: 100vh;
+      height: 100vh;
       background-color: pink;
       padding: 2rem 1rem;
       overflow-y: auto;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       animation: fadeIn 1s ease-in-out;
       z-index: 999;
     }
@@ -111,6 +109,7 @@
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       margin-bottom: 1.5rem;
+      word-wrap: break-word;
     }
 
     #back {
@@ -166,7 +165,7 @@
 </head>
 <body>
   <div class="container" id="main-container">
-    <h1>¿Te gustaria leer mis sentimientos? 🥰</h1>
+    <h1>¿Te gustaría leer mis sentimientos? 🥰</h1>
     <p>Para mi amorcito con mucho cariño</p>
 
     <div class="btn">
@@ -192,7 +191,7 @@
       <h1>Te amo de aqui hasta el infinito y mas allá mi amor❤️</h1>
     </p>
 
-    <button id="back">Regresa aqui bb</button>
+    <button id="back">Regresa aquí bb</button>
   </div>
 
   <script>

@@ -19,13 +19,26 @@
     body {
       font-family: sans-serif;
       background-color: #fff8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2cm;
+    }
+
+    .page {
+      background: white;
+      width: 21cm;
+      height: 29.7cm;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: auto;
     }
 
     .container {
       background-color: palegoldenrod;
       text-align: center;
       padding: 2rem 1rem;
-      min-height: 100vh;
+      min-height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -90,6 +103,7 @@
       justify-content: center;
       animation: fadeIn 1s ease-in-out;
       z-index: 999;
+      text-align: center;
     }
 
     #message.show {
@@ -99,7 +113,6 @@
     #message h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      text-align: center;
       color: #b30059;
     }
 
@@ -173,7 +186,6 @@
       }
     }
 
-    /* 🎉 Estilo para corazones animados */
     .heart {
       position: fixed;
       top: -50px;
@@ -194,30 +206,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <div class="container" id="main-container">
-    <h1>¿Te gustaria leer mis sentimientos? 🥰</h1>
-    <p>Para mi amorcito con mucho cariño</p>
+  <div class="page">
+    <div class="container" id="main-container">
+      <h1>¿Te gustaría leer mis sentimientos? 🥰</h1>
+      <p>Para mi amorcito con mucho cariño</p>
 
-    <div class="btn">
-      <a href="#" id="yes"><i class="fas fa-heart"></i> SI</a>
-      <a href="#" id="no"><i class="fas fa-heart-broken"></i> NO</a>
+      <div class="btn">
+        <a href="#" id="yes"><i class="fas fa-heart"></i> SI</a>
+        <a href="#" id="no"><i class="fas fa-heart-broken"></i> NO</a>
+      </div>
     </div>
   </div>
 
   <div id="message">
     <h2>Feliz Aniversario mi princesa 💘💖</h2>
     <p>
-     Mi amor hoy cumplimos 1 mes más juntos , y no es un día cualquiera por qué hoy celebramos el día que oficializamos por primera vez nuestra relación como novios
-      y como compañeros de vida que se amarán y respetaran a pesar de los problemas o malos entendidos que aparecerán en nuestro camino .
-      Gracias por elegirme y seguir eligiéndome a pesar de los malos entendidos o de la distancia ,estoy seguro y convencido de que pronto acabará eso y estaremos juntos🌹
-      Te amo con todo mi corazón y te pido disculpas por las veces que fui distante o discutíamos por todo , te juro que odie esa etapa de nuestra vida por que era alguien muy tonto que se dejaba guiar 
-      por sus celos o desconfianza , ahora sé que no vale la pena reaccionar impulsivamente como un tonto , por que me ciega totalmente y lastimo a mi amorcito que siempre trata de estar conmigo dándome su amor sincero...
-      Quiero lograr a tú lado nuestras promesas y sueños❤️ , quiero tener a nuestro hijo Porky🐶 y entregártelo como promesa de nuestro amor verdadero❤️
-      y también quiero acariciarte y llenarte de besos , quiero morderte y lamerte todoo que me traes demasiado loquito mi amor ❤️ quiero hacer todo a tú lado .<br>
-      Mi princesaa hermosaaa dejame decirte que odio escucharte decir que no te gusta algunas partes de tu físico que por esa inseguridad no logras usar ropa a tu gusto o que no te sientas cómoda contigo misma pero...
-      déjame decirte que eres una tonta por qué amorr miooo eres un mujeron un tremendo bombón🍫suculento y muy sexy que me tiene muy enamorado con ese cuerpazo tan bonito que te cargas mi princesa, me gusta como eres
-      y como te ves despeinada , chinita , triste , feliz y cariñosa.. te pido que por favor mi amor ya no le des importancia a esas tonterías si ? eres mi niña perfecta💘<br>
-    <button id="back">Regresa aqui bb</button>
+      Mi amor, hoy cumplimos un mes más juntos, y no es un día cualquiera, porque hoy celebramos el día que oficializamos por primera vez nuestra relación como novios
+      y como compañeros de vida que se amarán y respetarán a pesar de los problemas o malentendidos que puedan aparecer en nuestro camino.
+      Gracias por elegirme y seguir eligiéndome a pesar de los malos momentos o de la distancia. Estoy seguro y convencido de que pronto acabará eso y estaremos juntos 🌹.
+      Te amo con todo mi corazón y te pido disculpas por las veces que fui distante o discutimos por tonterías. Te juro que odié esa etapa de nuestra vida porque fui muy tonto,
+      guiado por mis celos o desconfianza. Ahora sé que no vale la pena reaccionar impulsivamente, porque eso me ciega y lastimo a mi amorcito que siempre trata de estar conmigo dándome su amor sincero.
+      Quiero lograr contigo nuestras promesas y sueños ❤️. Quiero tener a nuestro hijo Porky 🐶 y entregártelo como promesa de nuestro amor verdadero ❤️.
+      También quiero acariciarte, llenarte de besos, morderte y lamerte todo porque me traes demasiado loquito, mi amor ❤️. Quiero hacer todo a tu lado.<br><br>
+      Mi princesa hermosa, déjame decirte que odio escucharte decir que no te gusta alguna parte de tu físico y que por esa inseguridad no logras usar la ropa que quieres o no te sientes cómoda contigo misma.
+      Pero déjame decirte que eres una tontita, porque amor mío, ¡eres un mujerón! Un tremendo bombón 🍫, suculento y muy sexy que me tiene muy enamorado con ese cuerpazo tan bonito que te cargas, mi princesa.
+      Me gusta cómo eres y cómo te ves despeinada, chinita, triste, feliz y cariñosa... Te pido por favor, mi amor, que ya no le des importancia a esas tonterías, ¿sí?
+      Eres mi niña perfecta 💘.
+    </p>
+    <button id="back">Regresa aquí bb</button>
   </div>
 
   <script>
@@ -240,6 +256,8 @@
       container.style.display = 'none';
       message.classList.add('show');
       message.style.display = 'flex';
+      message.style.justifyContent = 'center';
+      message.style.alignItems = 'center';
     });
 
     noBtn.addEventListener('click', (e) => {
@@ -256,7 +274,6 @@
       container.style.display = 'flex';
     });
 
-    // 🎉 Lluvia de corazones
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');

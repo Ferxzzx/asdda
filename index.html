@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Te gustaría salir conmigo?</title>
+  <style>
+    body {
+      background-color: palegoldenrod;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .btn {
+      margin-top: 2rem;
+    }
+
+    .btn a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+      border-radius: 10px;
+      background-color: #97cfaa;
+      color: black;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .btn a#no {
+      background-color: #f36c46;
+    }
+
+    .btn a:hover {
+      transform: scale(1.1);
+    }
+
+    #message {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .a4-sheet {
+      width: 210mm;
+      height: 297mm;
+      background-color: pink;
+      margin: auto;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>¿Te gustaría salir conmigo? 🥰</h1>
+    <p>Eres la persona más especial del mundo</p>
+
+    <div class="btn">
+      <a href="#" id="yes">SI</a>
+      <a href="#" id="no">NO</a>
+    </div>
+
+    <div id="message">
+      <div class="a4-sheet">
+        <h2>Poesía del Amor 💖</h2>
+        <p>
+          En el jardín donde florece el querer,<br>
+          tus ojos son luceros al anochecer.<br>
+          Cada palabra tuya, dulce melodía,<br>
+          en mi pecho vibra con alegría.<br><br>
+
+          Si el amor es un arte, tú eres mi obra maestra,<br>
+          cada trazo de tu ser a mi alma se adiestra.<br>
+          Por ti escribo versos, por ti late mi ser,<br>
+          tú eres mi todo, mi razón de renacer. 🌹
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yes');
+    const noBtn = document.getElementById('no');
+    const message = document.getElementById('message');
+
+    const phrases = [
+      "¿Estás segurx?",
+      "Piénsalo bien...",
+      "Mira el otro botón 😢",
+      "No seas así 🥺",
+      "¡Te vas a arrepentir!",
+      "Dame una oportunidad 🥰"
+    ];
+
+    yesBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      message.style.display = 'flex';
+    });
+
+    noBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const yesFontSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+      yesBtn.style.fontSize = `${yesFontSize + 8}px`;
+      const randomIndex = Math.floor(Math.random() * phrases.length);
+      noBtn.textContent = phrases[randomIndex];
+    });
+  </script>
+</body>
+</html>

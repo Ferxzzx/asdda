@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¿Te gustaría salir conmigo?</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: palegoldenrod;
       font-family: sans-serif;
+    }
+
+    .container {
+      background-color: palegoldenrod;
       text-align: center;
       padding: 2rem;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .btn {
@@ -39,34 +53,42 @@
 
     #message {
       display: none;
-      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: pink;
+      padding: 4rem;
+      overflow-y: auto;
+      flex-direction: column;
       align-items: center;
-      margin-top: 2rem;
+      justify-content: center;
+      animation: fadeIn 1s ease-in-out;
+      z-index: 999;
     }
 
-    .a4-sheet {
-      width: 210mm;
-      height: 297mm;
-      background-color: pink;
-      margin: auto;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 1.2rem;
-      animation: fadeIn 1s ease-in-out;
+    #message h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    #message p {
+      font-size: 1.7rem;
+      line-height: 2.5rem;
+      max-width: 1000px;
+      text-align: center;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
+      from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="main-container">
     <h1>¿Te gustaría salir conmigo? 🥰</h1>
     <p>Eres la persona más especial del mundo</p>
 
@@ -74,29 +96,28 @@
       <a href="#" id="yes">SI</a>
       <a href="#" id="no">NO</a>
     </div>
+  </div>
 
-    <div id="message">
-      <div class="a4-sheet">
-        <h2>Poesía del Amor 💖</h2>
-        <p>
-          En el jardín donde florece el querer,<br>
-          tus ojos son luceros al anochecer.<br>
-          Cada palabra tuya, dulce melodía,<br>
-          en mi pecho vibra con alegría.<br><br>
+  <div id="message">
+    <h2>Poesía del Amor 💖</h2>
+    <p>
+      En el jardín donde florece el querer,<br>
+      tus ojos son luceros al anochecer.<br>
+      Cada palabra tuya, dulce melodía,<br>
+      en mi pecho vibra con alegría.<br><br>
 
-          Si el amor es un arte, tú eres mi obra maestra,<br>
-          cada trazo de tu ser a mi alma se adiestra.<br>
-          Por ti escribo versos, por ti late mi ser,<br>
-          tú eres mi todo, mi razón de renacer. 🌹
-        </p>
-      </div>
-    </div>
+      Si el amor es un arte, tú eres mi obra maestra,<br>
+      cada trazo de tu ser a mi alma se adiestra.<br>
+      Por ti escribo versos, por ti late mi ser,<br>
+      tú eres mi todo, mi razón de renacer. 🌹
+    </p>
   </div>
 
   <script>
     const yesBtn = document.getElementById('yes');
     const noBtn = document.getElementById('no');
     const message = document.getElementById('message');
+    const container = document.getElementById('main-container');
 
     const phrases = [
       "¿Estás segurx?",
@@ -109,6 +130,7 @@
 
     yesBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      container.style.display = 'none';
       message.style.display = 'flex';
     });
 

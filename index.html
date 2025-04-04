@@ -16,15 +16,28 @@
       background-color: #fff8f0;
     }
 
+    /* Contenedor centrado en formato A4 */
     .container {
+      width: 21cm; /* Ancho A4 */
+      height: 29.7cm; /* Alto A4 */
       background-color: palegoldenrod;
+      padding: 2rem;
       text-align: center;
-      padding: 2rem 1rem;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
 
     .btn {
@@ -111,22 +124,6 @@
       margin-bottom: 1.5rem;
     }
 
-    #back {
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #b30059;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    #back:hover {
-      background-color: #d63384;
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
@@ -144,16 +141,19 @@
     }
 
     @media screen and (max-width: 600px) {
+      /* Ajustes para pantallas pequeñas */
       .container {
-        padding: 1.5rem 1rem; /* Menos padding para móviles */
+        padding: 1.5rem;
+        width: auto;
+        height: auto;
       }
 
       h1 {
-        font-size: 1.6rem; /* Ajustar tamaño del título */
+        font-size: 1.6rem; /* Ajuste de tamaño en pantallas pequeñas */
       }
 
       p {
-        font-size: 1rem; /* Ajustar tamaño del texto */
+        font-size: 1rem; /* Ajuste del tamaño del texto */
       }
 
       .btn a {
@@ -172,22 +172,9 @@
       }
     }
 
-    /* 🎉 Estilo para corazones animados */
+    /* Eliminamos los corazones flotantes */
     .heart {
-      position: fixed;
-      top: -50px;
-      font-size: 2rem;
-      color: #ff4d88;
-      animation: fall 5s linear infinite;
-      z-index: 1000;
-      pointer-events: none;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-      }
+      display: none; /* Eliminar la animación de corazones */
     }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -206,28 +193,16 @@
   <div id="message">
     <h2>Feliz Aniversario mi princesa 💘💖</h2>
     <p>
-      Mi amor hoy cumplimos 1 mes más juntos , y no es un día cualquiera por qué hoy celebramos el día que oficializamos por primera vez 
-      nuestra relación como novios
+      Mi amor hoy cumplimos 1 mes más juntos , y no es un día cualquiera por qué hoy celebramos el día que oficializamos por primera vez nuestra relación como novios
       y como compañeros de vida que se amarán y respetaran a pesar de los problemas o malos entendidos que aparecerán en nuestro camino .
-      Gracias por elegirme y seguir eligiéndome a pesar de los malos entendidos o de la distancia ,estoy seguro y convencido de que 
-      pronto acabará eso y estaremos juntos🌹<br>
-      Te amo con todo mi corazón y te pido disculpas por las veces que fui distante o discutíamos por todo , te juro que odie esa etapa 
-      de nuestra vida por que era alguien muy tonto que se dejaba guiar 
-      por sus celos o desconfianza , ahora sé que no vale la pena reaccionar impulsivamente como un tonto , por que me ciega totalmente 
-      y lastimo a mi amorcito que siempre trata de estar conmigo dándome su amor sincero...
-      Quiero lograr a tú lado nuestras promesas y sueños❤️ , quiero tener a nuestro hijo Porky🐶 y entregártelo como promesa de nuestro 
-      amor verdadero❤️
-      y también quiero acariciarte y llenarte de besos , quiero morderte y lamerte todoo que me traes demasiado loquito mi amor ❤️ quiero 
-      hacer todo a tú lado .<br>
-      Mi princesaa hermosaaa dejame decirte que odio escucharte decir que no te gusta algunas partes de tu físico que por esa inseguridad 
-      no logras usar ropa a tu gusto o que no te sientas cómoda contigo misma pero...
-      déjame decirte que eres una tonta por qué amorr miooo eres un mujeron un tremendo bombón🍫suculento y muy sexy que me tiene muy 
-      enamorado con ese cuerpazo tan bonito que te cargas mi princesa, me gusta como eres
-      y como te ves despeinada , chinita , triste , feliz y cariñosa.. te pido que por favor mi amor ya no le des importancia a esas 
-      tonterías si ? eres mi niña perfecta💘<br>
-    </p>
-
-    <button id="back">Regresa aquí bb</button>
+      Gracias por elegirme y seguir eligiéndome a pesar de los malos entendidos o de la distancia ,estoy seguro y convencido de que pronto acabará eso y estaremos juntos🌹
+      Te amo con todo mi corazón y te pido disculpas por las veces que fui distante o discutíamos por todo , te juro que odie esa etapa de nuestra vida por que era alguien muy tonto que se dejaba guiar 
+      por sus celos o desconfianza , ahora sé que no vale la pena reaccionar impulsivamente como un tonto , por que me ciega totalmente y lastimo a mi amorcito que siempre trata de estar conmigo dándome su amor sincero...
+      Quiero lograr a tú lado nuestras promesas y sueños❤️ , quiero tener a nuestro hijo Porky🐶 y entregártelo como promesa de nuestro amor verdadero❤️
+      y también quiero acariciarte y llenarte de besos , quiero morderte y lamerte todoo que me traes demasiado loquito mi amor ❤️ quiero hacer todo a tú lado .<br>
+      Mi princesaa hermosaaa dejame decirte que odio escucharte decir que no te gusta algunas partes de tu físico que por esa inseguridad no logras usar ropa a tu gusto o que no te sientas cómoda contigo misma pero...
+      déjame decirte que eres una tonta por qué amorr miooo eres un mujeron un tremendo bombón🍫suculento y muy sexy que me tiene muy enamorado con ese cuerpazo tan bonito que te cargas mi princesa, me gusta como eres
+      y como te ves despeinada , chinita , triste , feliz y cariñosa.. te pido que por favor mi amor ya no le des importancia a esas tonterías si ? eres mi niña perfecta💘<br>
   </div>
 
   <script>
@@ -235,7 +210,6 @@
     const noBtn = document.getElementById('no');
     const message = document.getElementById('message');
     const container = document.getElementById('main-container');
-    const backBtn = document.getElementById('back');
 
     const phrases = [
       "¿Estás segura?",
@@ -260,27 +234,6 @@
       noBtn.textContent = phrases[randomIndex];
       noBtn.innerHTML = `<i class="fas fa-heart-broken"></i> ${noBtn.textContent}`;
     });
-
-    backBtn.addEventListener('click', () => {
-      message.style.display = 'none';
-      container.style.display = 'flex';
-    });
-
-    // 🎉 Lluvia de corazones
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerHTML = '💖';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 5000);
-    }
-
-    setInterval(createHeart, 300);
   </script>
 </body>
 </html>

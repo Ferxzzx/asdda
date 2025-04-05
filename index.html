@@ -135,6 +135,19 @@
         font-size: 1.6rem;
       }
     }
+
+    /* Estilo de los mensajes bajo el botón NO */
+    .mensaje {
+      color: #800000;
+      font-size: 16px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    /* Animación del agrandado del botón "SI" */
+    .boton-corazon:active {
+      transform: scale(1.2); /* Se agranda el botón cuando se presiona */
+    }
   </style>
 </head>
 <body>
@@ -145,6 +158,13 @@
       <button class="boton-corazon" id="siBtn">SHI ❤️</button>
       <button class="boton-corazon" id="noBtn">ÑO 💔</button>
     </div>
+    <div class="mensaje" id="mensaje1">¿Estás segura?</div>
+    <div class="mensaje" id="mensaje2">Perdoname por las veces que te hice sentir mal shi?</div>
+    <div class="mensaje" id="mensaje3">No seas enojoncita mi gruñona</div>
+    <div class="mensaje" id="mensaje4">Chinita hermosa sigues aun aqui ñamm</div>
+    <div class="mensaje" id="mensaje5">Ya te quiero comer todo mi amorcito traviesa miauu</div>
+    <div class="mensaje" id="mensaje6">TE AMO MUCHO Y PERDONAMEEE</div>
+    <div class="mensaje" id="mensaje7">Ve al otro boton mi gordita</div>
   </div>
 
   <div class="carta" id="carta">
@@ -155,7 +175,8 @@
       Gracias por elegirme y seguir eligiéndome a pesar de los malos entendidos o de la distancia, estoy seguro y convencido de que pronto acabará eso y estaremos juntos🌹
       Te amo con todo mi corazón y te pido disculpas por las veces que fui distante o discutíamos por todo, te juro que odié esa etapa de nuestra vida porque era alguien muy tonto que se dejaba guiar
       por sus celos o desconfianza. Ahora sé que no vale la pena reaccionar impulsivamente como un tonto, porque me ciega totalmente y lastimo a mi amorcito que siempre trata de estar conmigo dándome su amor sincero...
-      Quiero lograr a tu lado nuestras promesas y sueños❤️, quiero tener a nuestro hijo Porky🐶 y entregártelo como promesa de nuestro amor verdadero❤️    
+      Quiero lograr a tu lado nuestras promesas y sueños❤️, quiero tener a nuestro hijo Porky🐶 y entregártelo como promesa de nuestro amor verdadero❤️
+      y también quiero acariciarte y llenarte de besos, quiero morderte y lamerte todo, que me traes demasiado loquito mi amor ❤️ quiero hacer todo a tu lado❤️
     </p>
     <p>❤️ TE AMO DE AQUÍ HASTA EL INFINITO Y MÁS ALLÁ ❤️</p>
     <p class="message">
@@ -171,6 +192,15 @@
     const noBtn = document.getElementById('noBtn');
     const carta = document.getElementById('carta');
     const mainContainer = document.getElementById('main-container');
+    const mensajes = [
+      document.getElementById('mensaje1'),
+      document.getElementById('mensaje2'),
+      document.getElementById('mensaje3'),
+      document.getElementById('mensaje4'),
+      document.getElementById('mensaje5'),
+      document.getElementById('mensaje6'),
+      document.getElementById('mensaje7')
+    ];
 
     // Función para crear la lluvia de corazones
     function crearLluviaCorazones() {
@@ -206,13 +236,23 @@
       // Comenzar a crear más corazones y rosas al abrir la carta
       setInterval(crearLluviaCorazones, 1000); // Generar corazones cada 1 segundo
       setInterval(crearLluviaRosas, 1000); // Generar rosas cada 1 segundo
+      // Agrandar el botón SI
+      siBtn.style.transform = "scale(1.2)";
     });
 
     noBtn.addEventListener('click', () => {
-      // Si se cierra, se vuelve a mostrar el contenedor principal
+      // Si se presiona "NO", mostrar los mensajes
+      mensajes.forEach((mensaje, index) => {
+        setTimeout(() => {
+          mensaje.style.display = 'block';
+        }, index * 1000); // Mostrar los mensajes uno por uno con un intervalo de 1 segundo
+      });
+    });
+
+    function cerrarCarta() {
       carta.style.display = 'none';
       mainContainer.style.display = 'flex';
-    });
+    }
   </script>
 </body>
 </html>
